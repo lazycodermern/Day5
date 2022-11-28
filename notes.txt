@@ -1,0 +1,113 @@
+//functions
+//types of functions
+//var,let and const
+//hoisting
+//block and scope
+//template literals
+//spread opertaor
+//rest parameter
+-------------------------------
+1.functions:Set of statements that performs specific task
+syntax: function functionname(parameter){ 
+    //set of statements that perform specific task
+   }
+functionname(); //function call
+example:
+function mul(a,b){
+    console.log(a*b)
+}
+mul(1,2);
+//functions always have return
+//Return: To reduce the number of times code executed.
+//example:
+function mul(a,b,c){
+   return a*b*c
+}
+console.log(mul(1,2,3));
+//functionname is userdefined
+//if print without return then it shows undefined
+//function is used for DRY codes.
+//one function will have only one return keyword.
+//print the odd numbers in an array
+var arr = [12,13,14,15,16];
+var result =[];
+//function is used to extract the values(odd number)
+function odd(arr){
+    for(var i=0;i<arr.length;i++){
+        if(arr[i]%2!=0){
+           result.push(arr[i]);
+        }
+    }
+    return result;
+}
+console.log(odd(arr));
+--------------------------------
+Types of function:
+1.anonyomus function
+2.IIFE(Immediately Invoked Function expression)
+3.arrow function = ES6
+
+-----------------
+1.anonyomus function : a function without name.
+function(){
+    //set of statements
+}()
+example:
+var arr = [12,13,14,15,17,19,21]
+var result =[];
+var odd = function(arr){
+     for(var i=0;i<arr.length;i++){
+        if(arr[i]%2!=0){
+           result.push(arr[i]);
+        }
+    }
+    return result;
+}
+
+console.log(odd(arr));
+---------------------------------------------------
+2.IIFE:
+(function)(functioncall)
+
+example
+( function odd(arr){
+  var result =[];
+        for(var i=0;i<arr.length;i++){
+            if(arr[i]%2!=0){
+               result.push(arr[i]);
+            }
+        }
+      console.log (result);
+    }
+   )([12,13,14,15,17,19,21])
+   -------------------------------------------------------
+3.Arrow functions: introduced in ES6
+it has a => keyword and return keyword is must.
+function a(){
+
+}
+this has been overcomed as
+var a = (arr)=>{
+
+}
+example:
+var odd = (arr)=>{
+    var result =[];
+        for(var i=0;i<arr.length;i++){
+            if(arr[i]%2!=0){
+               result.push(arr[i]);
+            }
+        }
+        return result;
+}
+console.log(odd([12,13,14,15,17,19,21]))
+---------------------------------------------
+//function without parameter
+function greet(){
+    console.log("welcome");
+}
+greet();
+-----------------------------------------------
+//template literals
+template literals help us to overcome concatenation
+`${expression}`
