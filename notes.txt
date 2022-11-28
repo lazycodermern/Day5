@@ -111,3 +111,24 @@ greet();
 //template literals
 template literals help us to overcome concatenation
 `${expression}`
+//spread operator : converts a string into character array
+//synatx: ...
+//example1
+var arr=["guvi"]
+console.log(...arr);
+//example 2: 
+var arr1=["bob","join","sofia"]
+var arr2 = ["rupan" , "guvi"]
+var arr3 = [...arr2 , ...arr1];
+console.log(arr3)
+//rest parameter : it is used inside the function
+//to consider remaining values
+function foo(...rest){
+    var sum =0;
+    for(var i=0;i<rest.length;i++){
+     sum = sum+rest[i];
+    }
+    return sum;
+}
+console.log(foo(12,13,14,15,16,17))
+
